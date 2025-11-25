@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Main{
   public static void main(String[] args) {
     Karte a1 = new Karte(1,"Rot");
@@ -19,3 +20,56 @@ public class Main{
   
   }
   }
+=======
+class Test{
+    public static void main(String[] args){
+    Schulbuch b1 = new Schulbuch("Mathe ", 200);
+    Schulbuch b2 = new Schulbuch("Informatik ", 300);
+    Stack<Schulbuch> meinStack = new Stack<Schulbuch>();
+    meinStack.push(b1);
+    meinStack.push(b2);
+    System.out.println(meinStack.isEmpty());
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      }
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 2e29394b7609e7678837628f85cb2d389a2b8be8

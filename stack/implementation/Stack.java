@@ -1,5 +1,43 @@
 public class Stack<ContentType>{
+<<<<<<< HEAD
   class Node{
+=======
+<<<<<<< HEAD
+  Node erstes;
+  Stack(){
+    this.erstes = null;
+    }
+    
+  public void push(ContentType pContent){
+    Node pNode = new Node(pContent);
+    pNode = this.erstes;
+    }
+    
+    public boolean isEmpty(){
+     if (this.erstes == null) {
+      return true; 
+     }
+     return false; // end of if
+       
+     }  
+  
+  public void pop(){
+    if (!isEmpty()) {
+      this.erstes = this.erstes.getNT();
+      if (this.erstes==null) {
+         System.out.println("Stapel ist leer");
+      } // end of if
+    } // end of if
+    }
+  
+   // end of for
+    
+  
+  public Node getTop(){
+    return this.erstes;
+=======
+  public class Node{
+>>>>>>> 2e29394b7609e7678837628f85cb2d389a2b8be8
     private Node Nachfolger;
     private ContentType content;
     
@@ -45,7 +83,14 @@ public class Stack<ContentType>{
       } // end of if
     } 
     
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 25d0ef05bc35f46164f0a089e8fef667134682a4
+    }
+  
+  
+>>>>>>> 2e29394b7609e7678837628f85cb2d389a2b8be8
   
   public ContentType top(){
     if (this.top != null) {
@@ -55,4 +100,26 @@ public class Stack<ContentType>{
     } // end of if-else
   }
   
+<<<<<<< HEAD
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+=======
 }
+>>>>>>> 25d0ef05bc35f46164f0a089e8fef667134682a4
