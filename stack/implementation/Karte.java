@@ -1,12 +1,12 @@
 public class Karte{
-  public int Zahl;
-  public String Farbe;  
+  public int zahl;
+  public String farbe;  
     
     
     
-    public Karte(int Zahl, String Farbe){
-        this.Zahl = Zahl;
-        this.Farbe = Farbe;
+    public Karte(int zahl, String farbe){
+        this.zahl = zahl;
+        this.farbe = farbe;
         
     }
 

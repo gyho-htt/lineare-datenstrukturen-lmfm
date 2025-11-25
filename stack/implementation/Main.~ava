@@ -1,8 +1,8 @@
 public class Main{
   public static void main(String[] args) {
     Karte a1 = new Karte(1,"Rot");
-    Karte a2 = new Karte(2,"Blau");
-    Karte a3 = new Karte(3,"Blau");
+    Karte a2 = new Karte(999,"Blau");
+    Karte a3 = new Karte(6,"Blau");
     
     
     Stack<Karte> Kartenstapel = new Stack<Karte>();
@@ -11,7 +11,8 @@ public class Main{
     System.out.println(Kartenstapel.top().zahl);
     System.out.println(Kartenstapel.isEmpty());
     Kartenstapel.push(a2);
-    Kartenstapel.push(a3);
+    Kartenstapel.push(a2);
+    Kartenstapel.pop();
     System.out.println(Kartenstapel.top().zahl);
   
   

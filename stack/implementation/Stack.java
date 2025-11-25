@@ -1,14 +1,15 @@
 public class Stack<ContentType>{
-  public class Node{
+  class Node{
     private Node Nachfolger;
-    private ContentType Inhalt;
+    private ContentType content;
     
-    public Node(ContentType pInhalt){
-      this.Inhalt = pInhalt;
+    public Node(ContentType pcontent){
+      this.content = pcontent;
+      this.Nachfolger = null;
     }
     
-    public ContentType getInhalt(){
-      return this.Inhalt;
+    public ContentType getcontent(){
+      return this.content;
     }
     
     public Node getNachfolger(){
@@ -19,6 +20,7 @@ public class Stack<ContentType>{
       this.Nachfolger = pNachfolger;
     } 
   }
+  
   private Node top;
   
   public boolean isEmpty(){
@@ -26,26 +28,31 @@ public class Stack<ContentType>{
       return true;
     } // end of if
     return false;
-    }
-  
-  public void push(ContentType pContent){
-    Node pNode = new Node(pContent);
-    if (isEmpty()) {
-      this.top = pNode;
-    } else {
-      this.top.setNachfolger(pNode);
-    } 
-    this.top = pNode;
   }
   
+  public void push(ContentType pcontent){
+    Node pNode = new Node(pcontent);
+    if(!isEmpty()){
+      pNode.setNachfolger(this.top);
+    } // end of if-else
+    this.top = pNode;
+  }
+    
   public void pop(){
     if (!isEmpty()) {
-      
-    } // end of if
+      if (this.top != null) {
+        this.top = this.top.getNachfolger();
+      } // end of if
+    } 
     
-    }
+  }
   
-  
-  
+  public ContentType top(){
+    if (this.top != null) {
+      return this.top.getcontent();
+    } else {
+      return null;
+    } // end of if-else
+  }
   
 }
